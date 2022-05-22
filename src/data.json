@@ -1,0 +1,57 @@
+[
+    {   "id":"1", 
+        "img":"../public/img/cel1.png",
+        "categoria":"celular", 
+        "nombre":"Apple iPhone 13 Pro Max", 
+        "precio":"10000", 
+        "stock":"20"
+    },
+    {   "id":"2", 
+        "categoria":"celular", 
+        "nombre":"Samsung Galaxy S22 Ultra", 
+        "precio":"20000", 
+        "stock":"10"
+    },
+    {   "id":"3", 
+        "categoria":"celular", 
+        "nombre":"Moto G60s", 
+        "precio":"30000", 
+        "stock":"25"
+    },
+    {   "id":"4", 
+        "categoria":"tablet", 
+        "nombre":"Tablet Samsung A8", 
+        "precio":"20000", 
+        "stock":"40"
+    },
+    {   "id":"5", 
+        "categoria":"tablet", 
+        "nombre":"IPad Air 3", 
+        "precio":"50000", 
+        "stock":"30"
+    },
+    {   "id":"6", 
+        "categoria":"computadora", 
+        "nombre":"Notebook Dell", 
+        "precio":"79990", 
+        "stock":"5"
+    },
+    {   "id":"7", 
+        "categoria":"computadora", 
+        "nombre":"IeaCentre 3 AIO", 
+        "precio":"80999", 
+        "stock":"0"
+    },
+    {   "id":"8", 
+        "categoria":"consola", 
+        "nombre":"Playstation 5", 
+        "precio":"80999", 
+        "stock":"2"
+    },
+    {   "id":"9", 
+        "categoria":"consola", 
+        "nombre":"Xbox 360", 
+        "precio":"80999", 
+        "stock":"2"
+    }
+]
