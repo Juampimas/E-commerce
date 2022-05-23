@@ -1,0 +1,37 @@
+.ItemDetail{
+    width: 70%;
+    height: 70vh;
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .itemDetail-img{
+        width: 100%;
+    }
+    .ItemDetail-text{
+        h2{
+            font-size: 2rem;
+        }
+        .item-desc{
+            margin: 2em 0;
+            width: 80%;
+        }
+        .item-price{
+            font-size: 2rem;
+            margin: 1em 0;
+        }
+        .itemDetail-stock{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            .item-stock{
+                font-size: 1.5rem;
+                margin-right: 2em;
+            }
+            
+        }
+    }
+}

@@ -9,9 +9,10 @@ function ItemListContainer() {
 
 
     useEffect(() => {
-      fetch("../../data.json")
+      fetch("/data.json")
       .then((resultado) => resultado.json() )
-      .then((resp) => console.log(resp))
+      .then((resp) => setItems(resp))
+      .catch((err) => console.log(err))
     },[]);
         
 

@@ -1,8 +1,12 @@
+import { prettyDOM } from '@testing-library/react'
 import React from 'react'
+import Item from '../Item/Item'
 
-function ItemList() {
+function ItemList({items}) {
   return (
-    <div>ItemList</div>
+    
+      items.map((prod) => <Item id={prod.id} nombre={prod.nombre} categoria={prod.categoria} precio={prod.precio} img={prod.img} stock={prod.stock}/>)
+    
   )
 }
 

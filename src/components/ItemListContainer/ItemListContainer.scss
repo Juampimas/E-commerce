@@ -1,5 +1,11 @@
 #section1{
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-color: rgb(26, 26, 26);
+    padding: 4em 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 2em;
 }

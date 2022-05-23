@@ -1,9 +1,8 @@
-import carrito from "../../img/shopping-cart.png"
 import "./CartWidget.scss"
 
 function Carrito() {
     return (
-        <img src={carrito} alt="carrito" />
+        <img src="img/shopping-cart.png" alt="carrito" />
     )
 }
 

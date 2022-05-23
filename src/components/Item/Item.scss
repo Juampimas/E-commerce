@@ -1,0 +1,32 @@
+.item-container{
+    height: 25em;
+    width: 20em;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .item-img{
+        width: 50%;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .item-detail{
+        padding: .5em 1em;
+        margin: 0 .5em;
+        cursor: pointer;
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+}
