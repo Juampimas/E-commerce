@@ -13,16 +13,16 @@ function Navbar() {
         </div>
         <nav>
             <ul>
-                <Link to={`/categoria/celulares`}>
+                <Link to={`/category/celulares`}>
                     <li>Celulares</li>
                 </Link>
-                <Link to={`/categoria/tablets`}>
+                <Link to={`/category/tablets`}>
                     <li>Tablets</li>
                 </Link>
-                <Link to={`/categoria/computadoras`}>
+                <Link to={`/category/computadoras`}>
                     <li>Computadoras</li>
                 </Link>
-                <Link to={`/categoria/consolas`}>
+                <Link to={`/category/consolas`}>
                     <li>Consolas</li>
                 </Link>
             </ul>

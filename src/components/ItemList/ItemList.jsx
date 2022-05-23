@@ -1,4 +1,3 @@
-import { prettyDOM } from '@testing-library/react'
 import React from 'react'
 import Item from '../Item/Item'
 
