@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import "./ItemCount.scss"
 
-function ItemCount({prod, initialStock, stock}) {
+function ItemCount({initialStock, stock, onAdd}) {
 
     const[cant, setCant] = useState(initialStock)
 
@@ -22,11 +22,17 @@ function ItemCount({prod, initialStock, stock}) {
         }
     }
 
+    function addItem() {
+        onAdd(cant);
+        console.log(cant);
+    }
+
   return (
     <div className='ItemCount'>
         <button className="btn" onClick={remove}>-</button>
         {cant}
         <button className="btn" onClick={add}>+</button>
+        <button className="btn" onClick={addItem}>Add to Cart</button>
     </div>
   )
 }

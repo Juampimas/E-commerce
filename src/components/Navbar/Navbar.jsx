@@ -27,7 +27,9 @@ function Navbar() {
                 </Link>
             </ul>
         </nav>
-        <Carrito />
+        <Link to= "/cart">
+            <Carrito />
+        </Link>
     </header>
   )
 }

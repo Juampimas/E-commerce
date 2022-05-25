@@ -1,0 +1,23 @@
+.flex-btns{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    .btn{
+        padding: 1em 1.5em;
+        background: #fff;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 200ms ease;
+        &:hover{
+            transform: scale(0.9);
+        }
+    }
+    .cart-btn{
+        border: 2px solid green;
+        color: green;
+    }
+    .back-btn{
+        border: 2px solid red;
+        color: red;
+    }
+}
