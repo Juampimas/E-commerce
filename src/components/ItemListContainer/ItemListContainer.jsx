@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import { getFirestore, doc, getDoc, collection, getDocs, query, where } from "firebase/firestore"
 import ItemList from '../ItemList/ItemList'
 import "./ItemListContainer.scss"
 
@@ -9,22 +10,21 @@ function ItemListContainer() {
     const [items, setItems] = useState([]);
     const {categoryId} = useParams();
 
-
-    useEffect(() => {
-      if(categoryId) {
-        fetch("/data.json")
-        .then((resultado) => resultado.json())
-        .then((resp) => setItems(resp.filter((prods) => prods.categoria === categoryId)))
-        .catch((err) => console.log(err))
+    useEffect(()=> {
+      if(categoryId){
+        const db= getFirestore()
+        const queryCollection = collection(db, "productos")
+        const queryCollectionFilter = query(queryCollection, where("categoria", "==", categoryId))
+        getDocs(queryCollectionFilter)
+        .then(resp=> setItems(resp.docs.map(item =>({id: item.id, ...item.data()}))))
       }
       else{
-        fetch("/data.json")
-        .then((resultado) => resultado.json() )
-        .then((resp) => setItems(resp))
-        .catch((err) => console.log(err))
+        const db= getFirestore()
+        const queryCollection = collection(db, "productos")
+        getDocs(queryCollection)
+        .then(resp=> setItems(resp.docs.map(item =>({id: item.id, ...item.data()}))))
       }
-    },[categoryId]);
-        
+    }, [categoryId])        
 
   return (
     <section id='section1'>

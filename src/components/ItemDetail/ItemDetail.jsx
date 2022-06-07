@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
+import { useCartContext } from '../../context/cartContext'
 import BuyBtns from '../BuyBtns/BuyBtns'
 import ItemCount from '../ItemCount/ItemCount'
 import "./ItemDetail.scss"
 
 function ItemDetail({prod}) {
 
-  const [count, setCount] = useState(<ItemCount  prod={prod} initialStock={1} stock={prod.stock} onAdd={onAdd} />);
+  const {addToCart} = useCartContext()
+  const [count, setCount] = useState("itemCount");
 
-  function onAdd() {
-    setCount(<BuyBtns/>)
+  function onAdd(cant) {
+    addToCart({...prod, cantidad:cant})
+    setCount("buyButtons")
   }
 
   return (
@@ -23,7 +26,10 @@ function ItemDetail({prod}) {
                 <p className='item-stock'>Stock: {prod.stock}</p>
             </div>
             <p className='item-price'>Precio: ${prod.precio}</p>
-            {count}
+            {count === "itemCount" ?
+            <ItemCount  prod={prod} initialStock={1} stock={prod.stock} onAdd={onAdd} />:
+            <BuyBtns/>
+            }
         </div>
     </div>
   )
