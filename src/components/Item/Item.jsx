@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import React from 'react'
-import Carrito from '../CartWidget/CartWidget'
 import "./Item.scss"
 
 function Item(prod) {

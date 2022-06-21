@@ -7,8 +7,7 @@ const firebaseConfig = {
   projectId: "ecommerce-mas",
   storageBucket: "ecommerce-mas.appspot.com",
   messagingSenderId: "159732934547",
-  appId: "1:159732934547:web:fce1c64b4191b1280d6a66",
-  gs:"ecommerce-mas.appspot.com/img"
+  appId: "1:159732934547:web:fce1c64b4191b1280d6a66"
 };
 
 

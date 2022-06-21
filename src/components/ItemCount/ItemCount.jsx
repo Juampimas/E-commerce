@@ -1,4 +1,5 @@
 import {useState} from 'react'
+
 import "./ItemCount.scss"
 
 function ItemCount({initialStock, stock, onAdd}) {
@@ -32,7 +33,7 @@ function ItemCount({initialStock, stock, onAdd}) {
         <button className="btn" onClick={remove}>-</button>
         {cant}
         <button className="btn" onClick={add}>+</button>
-        <button className="btn" onClick={addItem}>Add to Cart</button>
+        <button className="btn" onClick={addItem}>Añadir al Carrito</button>
     </div>
   )
 }

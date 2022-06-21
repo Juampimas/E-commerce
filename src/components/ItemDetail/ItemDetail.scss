@@ -7,8 +7,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3em;
     .itemDetail-img{
         width: 100%;
+        img{
+            width: 100%;
+        }
     }
     .ItemDetail-text{
         h2{

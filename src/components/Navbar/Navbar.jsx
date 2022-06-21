@@ -1,5 +1,7 @@
 import React from 'react'
+
 import { Link } from 'react-router-dom'
+
 import Carrito from "../CartWidget/CartWidget"
 import "./Navbar.scss"
 
@@ -13,16 +15,16 @@ function Navbar() {
         </div>
         <nav>
             <ul>
-                <Link to={`/category/celulares`}>
+                <Link to={`/category/celulares`} >
                     <li>Celulares</li>
                 </Link>
-                <Link to={`/category/tablets`}>
+                <Link to={`/category/tablets`} >
                     <li>Tablets</li>
                 </Link>
-                <Link to={`/category/computadoras`}>
+                <Link to={`/category/computadoras`} >
                     <li>Computadoras</li>
                 </Link>
-                <Link to={`/category/consolas`}>
+                <Link to={`/category/consolas`} >
                     <li>Consolas</li>
                 </Link>
             </ul>
