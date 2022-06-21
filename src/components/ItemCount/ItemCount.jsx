@@ -7,7 +7,7 @@ function ItemCount({initialStock, stock, onAdd}) {
     const[cant, setCant] = useState(initialStock)
 
     function remove() {
-        if(cant != initialStock){
+        if(cant !== initialStock){
             setCant(cant - 1)
         }
         else{
