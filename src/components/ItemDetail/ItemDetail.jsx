@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useCartContext } from '../../context/cartContext'
 import BuyBtns from '../BuyBtns/BuyBtns'
 import ItemCount from '../ItemCount/ItemCount'
@@ -6,13 +6,17 @@ import "./ItemDetail.scss"
 
 function ItemDetail({prod}) {
 
-  const {addToCart} = useCartContext()
+  const {addToCart, verSiHayEnCarrito} = useCartContext()
   const [count, setCount] = useState("itemCount");
 
   function onAdd(cant) {
     addToCart({...prod, cantidad:cant})
     setCount("buyButtons")
   }
+
+  useEffect(() => {
+    verSiHayEnCarrito(prod);
+  });
 
   return (
     <div className='ItemDetail'>
@@ -26,9 +30,9 @@ function ItemDetail({prod}) {
                 <p className='item-stock'>Stock: {prod.stock}</p>
             </div>
             <p className='item-price'>Precio: ${prod.precio}</p>
-            {count === "itemCount" ?
-            <ItemCount  prod={prod} initialStock={1} stock={prod.stock} onAdd={onAdd} />:
-            <BuyBtns/>
+            {count === "itemCount" 
+            ? <ItemCount  prod={prod} initialStock={1} stock={prod.stock} onAdd={onAdd} />
+            : <BuyBtns/>
             }
         </div>
     </div>

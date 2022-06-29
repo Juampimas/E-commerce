@@ -14,6 +14,7 @@ function ItemCount({initialStock, stock, onAdd}) {
             return initialStock;
         }
     }
+    
     function add() {
         if(cant < stock){
             setCant(cant + 1)
@@ -25,7 +26,6 @@ function ItemCount({initialStock, stock, onAdd}) {
 
     function addItem() {
         onAdd(cant);
-        console.log(cant);
     }
 
   return (
